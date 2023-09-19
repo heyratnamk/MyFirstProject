@@ -35,11 +35,15 @@ p {
 /* Center the form element, by giving it a margin of 0 auto. Then, fix its size to a maximum width of 500px, 
 and a minimum width of 300px. In between that range, allow it to have a 'width' of 60vw. */
 
+/* Speaking of padding, the submit button is sitting at the bottom of the form element. 
+ Add 2em of padding only to the bottom of the form */
+
 form {
   margin: 0 auto;
   max-width: 500px;
   min-width: 300px;
   width: 60vw;
+  padding: 2em;
 }
 
 /* During development, it is useful to see the fieldset default borders. However, they make the content appear too separated.
@@ -109,9 +113,10 @@ input,
 textarea {
   background-color: #0a0a23;
   border: 1px solid #0a0a23;
-  color:#ffffff;
-  
+  color: #ffffff;
+
 }
+
 /* To style the submit button, you can use an attribute selector, which selects an element based on the given attribute value. 
 Here is an example:
 
@@ -134,13 +139,31 @@ Change the margin property to include 1em on the top and bottom, while leaving t
 Then set the width as described above. */
 
 input[type="submit"] {
-  display:block;
+  display: block;
   width: 60%;
   margin: 1em auto 1em auto;
   font-size: 1.1rem;
-  height:2em;
+  height: 2em;
   background-color: #3b3b4f;
-  border-color:white;
+  border-color: white;
   min-width: 300px;
 }
 
+/* Most browsers inject their own default CSS properties and values for different elements. 
+If you look closely, you might be able to notice the file input is smaller than the other text input elements. 
+By default, a 'padding of 1px 2px' is given to input elements you can type in.
+
+Using another attribute selector, style the <input> with a 'type' of 'file' to be the same padding as the other input elements.
+ */
+
+input[type="file"] {
+  padding: 1px 2px;
+}
+
+/* Last, but not least, change the text color of the terms and conditions link to #dfdfe2.
+Well done! You have completed the final part of the Registration Form practice project. */
+
+a {
+  color: #dfdfe2;
+}
+/* finished */

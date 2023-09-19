@@ -113,6 +113,8 @@
     <!-- To finish this fieldset off, link the text terms and conditions in the third label to the following location:
     https://www.freecodecamp.org/news/terms-of-service/ -->
 
+    <!-- For the second fieldset, you want the input and label text to appear on the same line.
+      Start, by giving the <input> elements in the second fieldset a class of inline. -->
 
     <fieldset>
             <label for="personal-account"><input type="radio" name="account-type" id="personal-account" class="inline"></input> Personal
@@ -133,13 +135,11 @@
     Now, if someone tries to submit the form with values outside of the range, a warning will appear, and the form will not submit. 
     Give it a try. -->
 
-    <!-- For the second fieldset, you want the input and label text to appear on the same line.
-      Start, by giving the <input> elements in the second fieldset a class of inline. -->
 
 
     <fieldset>
-      <label for="profile-picture" class="inline">Upload a profile picture: <input type="file" id="profile-picture" name="profile-picture" class="inline"></input></label>
-      <label for="age" class="inline">Input your age (years): <input type="number" min="13" max="120" id="age" name="age" class="inline"></input></label>
+      <label for="profile-picture" >Upload a profile picture: <input type="file" id="profile-picture" name="profile-picture"></input></label>
+      <label for="age">Input your age (years): <input type="number" min="13" max="120" id="age" name="age"></input></label>
 
       <!-- Adding a dropdown to the form is easy with the select element. The <select> element is a container' 
     for a group of option elements,and the <option> element acts as a 'label' for each dropdown option. Both elements require closing tags.
@@ -203,3 +203,4 @@
 </body>
 
 </html>
+<!-- finished -->
